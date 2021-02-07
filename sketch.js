@@ -4,11 +4,10 @@ var speed, weight, thickness;
 function setup() {
   createCanvas(1600,400);
   bullet = createSprite(200, 200, 100, 10);
-  wall = createSprite(1300, 200, thickness, height/2);
+  thickness = round(random(22,83));
+  wall = createSprite(1300, 200,thickness, height/2);
   speed = round(random(223,321));
   weight = round(random(30, 52));
-  thickness = round(random(22,83));
-  
 }
 
 function draw() {
@@ -44,10 +43,7 @@ function draw() {
   
 
   drawSprites();
-  console.log(bullet.shapeColor);
-  console.log(speed)
   console.log(thickness);
-  console.log(weight)
 }
 
 function hasCollided(wall, bullet)
